@@ -1,14 +1,16 @@
 server:
   port: 8000
+  servlet:
+    context-path: /demo
 
 eureka:
-  instance:
-    # 配置当前主机名
-    hostname: localhost
+#  instance:
+#    # 配置当前主机名
+#    hostname: localhost
   client:
     # 单机eureka 时需要为false
     register-with-eureka: false  # 指定当前主机是否需要向Eureka Server注册自己
-    fetch-registry: false   # 指定当前主机是否需要从Eureka Server下载服务注册表
+    fetch-registry: false   # 指定当前主机是否需要从Eureka Server下载服务注册表：自己就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
     service-url:
       # 相同的配置项 eureka.client.service-url.defaultZone 在服务端是指定暴露给客户端访问的地址
       # 而它在客户端，则是访问eureka 服务的地址
