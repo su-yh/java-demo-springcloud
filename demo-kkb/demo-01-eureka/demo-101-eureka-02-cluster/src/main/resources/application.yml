@@ -33,3 +33,8 @@ eureka:
     eviction-interval-timer-in-ms: 5000
     # 推算期望每分钟心跳数的一个时间窗口时间段，默认为15 分钟。单位：毫秒
     renewal-threshold-update-interval-ms: 900000
+  dashboard:
+    # eureka 前端dashboard 访问路径，拼接上来最终的路径为：http://localhost:${server.port}/${server.servlet.context-path}/${eureka.dashboard.path}
+    # 解析开就是：http://localhost:8100/demo/dashboard
+    path: /dashboard
+
