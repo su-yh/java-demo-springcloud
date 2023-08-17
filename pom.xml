@@ -7,12 +7,6 @@
     <groupId>com.suyh</groupId>
     <artifactId>java-demo-springcloud</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <!-- <module>demo-xdclass</module> -->
-        <!-- <module>demo-mengxuegu</module> -->
-        <module>demo-kkb</module>
-        <module>demo-kkb/demo-02-openfeign/demo-211-provider</module>
-    </modules>
 
     <packaging>pom</packaging>
 
@@ -25,6 +19,45 @@
     <properties>
         <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
     </properties>
+
+    <profiles>
+        <profile>
+            <id>demo_kkb</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <modules>
+                <module>demo-kkb</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>demo_mengxuegu</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <modules>
+                <module>demo-mengxuegu</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>demo_suyh_202308</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <modules>
+                <module>demo-suyh-202308</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>demo_xdclass</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <modules>
+                <module>demo-xdclass</module>
+            </modules>
+        </profile>
+    </profiles>
 
     <!--依赖声明-->
     <dependencyManagement>

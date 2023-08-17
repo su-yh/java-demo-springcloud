@@ -1,0 +1,11 @@
+spring:
+  config:
+    import:
+      - application-eureka.yaml
+      - application-servlet.yaml
+  profiles:
+    active: local
+
+
+
+

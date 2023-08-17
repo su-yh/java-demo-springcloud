@@ -1,0 +1,12 @@
+server:
+  port: 8100
+  servlet:
+    context-path: /suyh
+spring:
+  config:
+    import:
+      - application-eureka.yaml
+  profiles:
+    active: local
+
+

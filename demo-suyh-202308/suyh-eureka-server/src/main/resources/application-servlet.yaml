@@ -1,0 +1,15 @@
+server:
+  servlet:
+    context-path: /suyh-eureka-server
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
+server:
+  port: 8761
+
+
