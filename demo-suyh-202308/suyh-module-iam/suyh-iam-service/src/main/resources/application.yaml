@@ -12,6 +12,5 @@ spring:
   profiles:
     active: local
 
-
-
+debug: true
 
