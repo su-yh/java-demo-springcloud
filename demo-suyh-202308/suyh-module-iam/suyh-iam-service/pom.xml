@@ -54,7 +54,6 @@
         <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-core</artifactId>
-            <!--版本支持问题-->
             <version>7.15.0</version>
         </dependency>
 
