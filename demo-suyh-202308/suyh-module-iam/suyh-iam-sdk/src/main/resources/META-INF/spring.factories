@@ -1,0 +1,4 @@
+
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.suyh202308.iam.sdk.config.SuyhIamSdkAutoConfiguration
+

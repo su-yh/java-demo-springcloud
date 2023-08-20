@@ -1,0 +1,22 @@
+
+spring:
+  application:
+    name: suyh2023-iam
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
+#指定注册中心地址
+eureka:
+  client:
+    # 我需要注册到eureka
+    register-with-eureka: true
+    # iam 作为一个基础服务应该没有业务需要会去使用其他服务，暂时不去拉取服务信息
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://localhost:8761/suyh-eureka-server/eureka
+
