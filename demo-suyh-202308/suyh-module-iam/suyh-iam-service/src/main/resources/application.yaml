@@ -3,8 +3,11 @@
 spring:
   config:
     import:
+      - application-datasource.yaml
       - application-eureka.yaml
+      - application-flywaydb.yaml
       - application-iam.yaml
+      - application-mybatis.yaml
       - application-servlet.yaml
   profiles:
     active: local
