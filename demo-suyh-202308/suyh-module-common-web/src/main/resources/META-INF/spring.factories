@@ -1,0 +1,4 @@
+
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.suyh.common.web.config.SuyhCommonWebConfiguration
+

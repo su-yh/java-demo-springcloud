@@ -13,6 +13,7 @@
         <module>suyh-eureka-server</module>
         <module>suyh-demo-provider-service</module>
         <module>suyh-module-iam</module>
+        <module>suyh-module-common-web</module>
     </modules>
 
     <properties>
