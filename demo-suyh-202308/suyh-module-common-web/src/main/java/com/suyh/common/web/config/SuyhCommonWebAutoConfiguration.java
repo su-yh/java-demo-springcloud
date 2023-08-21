@@ -6,13 +6,14 @@ import com.suyh.common.web.mvc.configurer.SuyhWebMvcConfigurer;
 import com.suyh.common.web.mvc.error.SuyhErrorAttributes;
 import com.suyh.common.web.mvc.response.SuyhResponseBodyAdvice;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.error.ErrorAttributes;
 import org.springframework.context.annotation.Bean;
 
+@ConditionalOnProperty(value = "suyh2308.common.web.enabled", havingValue = "true", matchIfMissing = true)
 @EnableConfigurationProperties(SuyhCommonWebProperties.class)
 @AutoConfiguration(before = ErrorMvcAutoConfiguration.class)
 public class SuyhCommonWebAutoConfiguration {
@@ -30,11 +31,9 @@ public class SuyhCommonWebAutoConfiguration {
         return new SuyhErrorAttributes();
     }
 
-    @ConditionalOnBean(ObjectMapper.class)
     @ConditionalOnMissingBean
     @Bean
     public SuyhResponseBodyAdvice suyhResponseBodyAdvice(ObjectMapper objectMapper) {
-        // TODO: suyh - 这里没有运行，也就是说没有ObjectMapper 的bean 对象
         return new SuyhResponseBodyAdvice(objectMapper);
     }
 }
